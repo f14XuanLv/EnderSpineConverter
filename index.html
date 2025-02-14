@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spine 文件转换器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spine 文件转换器</h1>
+        <p class="subtitle">为Ender系列游戏且由Fmodel解包的素材专属</p>
+        
+        <div class="converters">
+            <!-- Spine 拆分器 -->
+            <div class="converter-box">
+                <h2>Spine JSON 拆分 （一代需要）</h2>
+                <div class="drop-zone" id="splitDropZone">
+                    <div class="drop-zone-content">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p>拖拽或点击上传例如 p0001_Lily.json 的文件，通常100MB以上的那个</p>
+                        <input type="file" id="splitFileInput" accept=".json" class="file-input">
+                    </div>
+                </div>
+                <div class="output-list">
+                    <h3>输出文件:</h3>
+                    <ul id="splitOutputList"></ul>
+                </div>
+            </div>
+
+            <!-- Atlas 转换器 -->
+            <div class="converter-box">
+                <h2>Atlas 转换</h2>
+                <div class="drop-zone" id="atlasDropZone">
+                    <div class="drop-zone-content">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p>拖拽或点击上传 Atlas JSON 文件，例如 p0001_Lily-atlas.json</p>
+                        <input type="file" id="atlasFileInput" accept=".json" class="file-input">
+                    </div>
+                </div>
+                <div class="output-list">
+                    <h3>输出文件:</h3>
+                    <ul id="atlasOutputList"></ul>
+                </div>
+            </div>
+
+            <!-- Data 转换器 -->
+            <div class="converter-box">
+                <h2>Data 转换</h2>
+                <div class="drop-zone" id="dataDropZone">
+                    <div class="drop-zone-content">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p>拖拽或点击上传 Data JSON 文件，例如 p0001_Lily-data.json</p>
+                        <input type="file" id="dataFileInput" accept=".json" class="file-input">
+                    </div>
+                </div>
+                <div class="output-list">
+                    <h3>输出文件:</h3>
+                    <ul id="dataOutputList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
