@@ -136,3 +136,24 @@ h1 {
     color: #666;
     font-size: 1.2rem;
 }
+
+.github-link {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+    z-index: 1000;
+}
+
+.github-link:hover {
+    color: #2c3e50;
+}
+
+/* 在移动设备上调整位置 */
+@media (max-width: 768px) {
+    .github-link {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
